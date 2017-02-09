@@ -1,0 +1,10 @@
+.DS_Store
+npm-debug.log
+*.sublime-project
+*.sublime-workspace
+.vscode
+.vscode/*
+.env
+stats.json
+yarn.lock
+/node_modules
