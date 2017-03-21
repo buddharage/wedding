@@ -1,46 +1,383 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Thai and Lydia</title>
-    <meta name="description" content="Thai and Lydia's Party'">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="manifest.json">
-    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
-    <meta name="msapplication-config" content="favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-  </head>
-  <body>
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <div id="root"></div>
-    <script src="./bundle.js"></script>
-		<script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<head>
+  <meta charset="utf-8">
+  <title>Thai and Lydia</title>
+  <meta name="description" content="Thai and Lydia's Party'">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="manifest.json">
+  <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+  <meta name="msapplication-config" content="favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" type="text/css" media="screen" />
+  <!-- Pace -->
+  <link rel="stylesheet" href="css/preloader.css" media="screen">
+  <link rel="stylesheet" href="css/preloader-couple-name.css" media="screen">
+  <!-- Flexslider -->
+  <link rel="stylesheet" href="css/flexslider/flexslider.css" type="text/css">
+  <!-- Animate -->
+  <link rel="stylesheet" href="css/animate/animate.css" type="text/css">
+  <!-- Countdown -->
+  <link rel="stylesheet" href="css/countdown/jquery.countdown.css" type="text/css">
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="css/magnific-popup/magnific-popup.css" type="text/css">
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="css/owlcarousel/owl.carousel.css" type="text/css">
+  <link rel="stylesheet" href="css/owlcarousel/owl.theme.css" type="text/css">
+  <!-- Icon -->
+  <link rel="stylesheet" href="css/fonts/fontello/css/fontello.css" type="text/css" media="screen" />
+  <!-- Font -->
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+  <link href="css/style.css" rel="stylesheet" media="screen">
+
+  <link href="css/skin/lapis/lapis.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+  <!--PRELOADER-->
+  <div id="preloader" class="background_image" style="background-image:url(images/slide1.jpg)">
+    <!-- BLACK OVERLAY -->
+    <div class="black-overlay">
+    </div>
+
+    <!-- COUPLE NAME -->
+    <div class="alignment">
+      <div class="v-align center-middle">
+
+        <div class="spinner-animation">
+          <i class="de-icon-heart-1 top-heart"></i>
+        </div>
+        <div class="her-name">
+          Lydia &amp;
+        </div>
+        <div class="his-name">
+          Thai
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--END of PRELOADER-->
+
+  <!-- NAVIGATION -->
+  <header id="nav-header">
+    <nav id="nav-bar" class="top-bar fluid-width transparent nav-center animation fadeInDown">
+      <div id="nav-wrapper">
+        <!-- LOGO -->
+        <div class="logo-wrapper">
+          <!-- CSS LOGO -->
+          <a href="index.html">
+            <div class="css-logo rounded">
+              <div class="css-logo-text">
+                <strong>L</strong> + <strong>T</strong>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- END of LOGO -->
+      </div>
+    </nav>
+  </header>
+  <!-- END of NAVIGATION -->
+
+  <!-- MAIN SLIDER -->
+  <section id="main-slider" class="flexslider fullscreen">
+    <!-- MAIN SLIDER TITLE OUTTER WRAPPER -->
+    <div class="slide-title-outter-wrapper">
+      <!-- MAIN SLIDER TITLE INNER WRAPPER -->
+      <div class="slide-title-inner-wrapper">
+        <!-- TITLE -->
+        <div class="slide-title align-middle">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-offset-3 col-md-6 animation delay1 fadeInUp">
+
+                <div id="save-the-date">
+                  <div id="save">Save</div>
+                  <div id="the-date">The Date</div>
+                  <div id="date">- 06<span class="pink-dot">.</span>3<span class="pink-dot">.</span>17 -</div>
+                </div>
+                <div class="banner-text light medium" style="letter-spacing:3px">
+                  <h4>*** LET'S GO CRAZY ***</h4>
+                </div>
+                <div class="heart-divider" style="margin:0">
+                  <span class="white-line" style="width:10px"></span>
+                  <i class="de-icon-heart pink-heart"></i>
+                  <i class="de-icon-heart white-heart"></i>
+                  <span class="white-line" style="width:10px"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END of MAIN SLIDER TITLE INNER WRAPPER -->
+    </div>
+    <!-- END of MAIN SLIDER TITLE OUTTER WRAPPER -->
+
+    <!-- MAIN SLIDER IMAGES -->
+
+    <ul class="slides">
+      <li>
+        <!-- SLIDE IMAGE -->
+        <div data-stellar-ratio="0.5" class="slide-image" style="background-image:url(images/slide1.jpg);">
+        </div>
+
+        <!-- SLIDE OVERLAY -->
+        <div class="slide-overlay" style="opacity:0.2"> </div>
+      </li>
+    </ul>
+    <!-- END of MAIN SLIDER IMAGES -->
+  </section>
+
+
+  <!--CONTENT SECTION-->
+  <section id="content">
+    <!-- CONTAINER-1 -->
+    <div class="container home-content">
+      <!-- TITLE -->
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6 text-center">
+
+          <div class="page-title">
+            <h1>Registry</h1>
+
+            <div class="heart-divider">
+              <span class="grey-line"></span>
+              <i class="de-icon-heart pink-heart"></i>
+              <i class="de-icon-heart grey-heart"></i>
+              <span class="grey-line"></span>
+            </div>
+
+            <a href="https://www.wanderable.com/hm/thaiandlydia" class="de-button large" style="margin: 4rem 0;">Honeymoon Registry</a>
+
+            <p>Your presence at our wedding is already the biggest present, but for those of you who want to suck up to us some
+              more, we would appreciate it if you would donate to our honeymoon fund!</p>
+
+            <p>After the Vietnam war had ended, Thai's mother managed to smuggle herself and his sister onto a banana boat to
+              Thailand. There, she rotated between several refugee camps before arriving at Phanat Nikhom, where Thai was
+              born. It's been his lifelong dream to visit that area..
+            </p>
+
+            <p>For Lydia, we hear the beache there are pretty sick.</p>
+
+            <p>Find out more about <a href="https://youtu.be/E_i_HkeqN5E" target="_blank">The Boat People</a>.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- LOCATION & COUNTDOWN SECTION -->
+    <section id="location-countdown">
+      <div class="image-divider auto-height" style="background-image:url(images/starliner.jpg);" data-stellar-background-ratio="0.5">
+
+        <div class="divider-overlay"></div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-offset-1 col-md-10 text-center">
+
+              <div class="banner-text light medium animation fadeInUp" style="letter-spacing:3px;">
+                <h4>*** AT THE STARLINER, BROOKLYN ***</h4>
+              </div>
+
+              <div class="animation fadeInUp">
+                <div id="counting-down">
+                  <div id="counting">Counting</div>
+                  <div id="down">Down</div>
+                </div>
+              </div>
+
+              <div class="heart-divider animation fadeInUp">
+                <span class="white-line"></span>
+                <i class="de-icon-heart pink-heart"></i>
+                <i class="de-icon-heart white-heart"></i>
+                <span class="white-line"></span>
+              </div>
+
+              <div id="countdown" class="simple-countdown animation fadeInUp"></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APP -->
+    <section class="home-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="section-title">
+              <h2>We gots an app!</h2>
+
+              <div class="heart-divider">
+                <span class="grey-line"></span>
+                <i class="de-icon-heart pink-heart"></i>
+                <i class="de-icon-heart grey-heart"></i>
+                <span class="grey-line"></span>
+              </div>
+
+              <p>Download the Joy app and use the code <em>"6pjyf8"</em>.</p>
+              <p>View and share photos, get up-to-date details, and follow along.</p>
+
+              <div class="row">
+                <a href="https://play.google.com/store/apps/details?id=com.withjoy.joy" target="_blank" class="de-button large">
+                  <svg width="28px" height="32px" viewBox="0 0 28 32" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    class="ng-scope">
+                    <path stroke="black" stroke-width="1.5" transform="translate(1,2)" d="M17.4705455,8.86634666 L1.95272727,0.333983028 C1.51272727,0.0932557555 1.10690909,0.0372557555 0.778181818,0.13980121 L13.4887273,12.8488921 L17.4705455,8.86634666 L17.4705455,8.86634666 Z M17.4909091,16.8510739 L22.7883636,13.9383467 C23.8625455,13.3456194 23.8625455,12.3812558 22.7883636,11.789983 L17.4712727,8.86634666 L13.4887273,12.8488921 L17.4909091,16.8510739 L17.4909091,16.8510739 Z M0.777454545,0.13980121 C0.305454545,0.287437574 0,0.765255755 0,1.48816485 L0.00290909091,24.2401648 C0.00290909091,24.9550739 0.298909091,25.4256194 0.757090909,25.5827103 L13.4887273,12.8510739 L0.777454545,0.13980121 L0.777454545,0.13980121 Z M0.757090909,25.5827103 C1.088,25.6947103 1.50181818,25.6423467 1.95272727,25.3950739 L17.4887273,16.8510739 L13.4887273,12.8510739 L0.757090909,25.5827103 L0.757090909,25.5827103 Z"></path>
+                  </svg>
+                </a>
+
+                <a href="https://search.itunes.apple.com/WebObjects/MZContentLink.woa/wa/link?mt=8&path=apps%2fjoyyourweddingapp" target="_blank"
+                  class="de-button large">
+                  <svg width="31px" height="32px" viewBox="0 0 31 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" class="ng-scope">
+                    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+                    <title>apple-logo</title>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                      <g id="Downloads" sketch:type="MSArtboardGroup" transform="translate(-223.000000, -257.000000)" stroke="#000000" stroke-width="1.5">
+                        <g id="apple-logo" sketch:type="MSLayerGroup" transform="translate(224.000000, 258.000000)">
+                          <path d="M23.833125,20.2526 C22.873125,15.6122 27.465,12.8834 27.465,12.8834 C27.465,12.8834 25.670625,10.4012 22.66875,9.7622 C19.665,9.1214 18.1575,9.917 16.655625,10.5218 C15.15375,11.1194 14.4075,11.1194 14.4075,11.1194 C12.230625,11.1194 10.65,8.918 6.519375,9.917 C3.669375,10.6136 0.673125,13.7636 0.13125,17.531 C-0.410625,21.3002 0.76125,26.1026 3.009375,29.8286 C5.266875,33.5564 7.558125,34.9622 9.18375,34.9964 C10.81875,35.0396 12.444375,33.8786 14.4075,33.5978 C16.363125,33.317 17.570625,34.28 19.49625,34.8002 C21.41625,35.3204 22.081875,34.8362 24.294375,33.0362 C26.506875,31.229 28.513125,26.0612 28.513125,26.0612 C28.513125,26.0612 24.793125,24.9002 23.833125,20.2526 Z M19.4305742,5.53542938 C21.6241451,3.36555608 20.8775207,0 20.8775207,0 C20.8775207,0 17.8042064,0.527451901 15.7379668,2.60910371 C13.6813735,4.70014078 14.0209236,8 14.0209236,8 C14.0209236,8 17.2389326,7.70530267 19.4305742,5.53542938 Z"
+                            id="Fill-1" sketch:type="MSShapeGroup"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+      <div class="image-divider fixed-height" style="background-image:url(images/lydia.jpg);" data-stellar-background-ratio="0.5">
+
+        <div class="divider-overlay"></div>
+
+        <!-- Use Center Middle Alignment to align middle the content for fixed-height parallax -->
+        <div class="alignment">
+          <div class="v-align center-middle">
+
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+
+                  <div class="animation fadeInUp">
+                    <div id="thank-you">
+                      <div id="thank">Thank</div>
+                      <div id="you">You</div>
+                    </div>
+                  </div>
+
+                  <div class="heart-divider animation delay1 fadeInUp">
+                    <span class="white-line"></span>
+                    <i class="de-icon-heart pink-heart"></i>
+                    <i class="de-icon-heart white-heart"></i>
+                    <span class="white-line"></span>
+                  </div>
+
+                  <div id="footer-couple-name" class="animation delay1 fadeInUp">
+                    Lydia & Thai
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </footer>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
       ga('create', 'UA-91665066-1', 'auto');
       ga('send', 'pageview');
-		</script>
-  </body>
+    </script>
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- Pace -->
+    <script src="js/pace/pace.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <!-- Modernizr -->
+    <script src="js/modernizr/modernizr.js"></script>
+    <!-- Device JS -->
+    <script src="js/devicejs/device.js"></script>
+    <!-- TinyNav -->
+    <script src="js/tinynav/tinynav.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/smoothscroll/jquery.smooth-scroll.js"></script>
+    <!-- Flexslider -->
+    <script src="js/flexslider/jquery.flexslider.js"></script>
+    <!-- Sticky -->
+    <script src="js/sticky/jquery.sticky.js"></script>
+    <!-- Waypoint -->
+    <script src="js/waypoint/jquery.waypoints.min.js"></script>
+    <!-- DoubleTapToGo -->
+    <script src="js/jquery-ui-widget/jquery.ui.widget.js"></script>
+    <script src="js/jquery-doubletaptogo/jquery.dcd.doubletaptogo.js"></script>
+    <!-- Vide -->
+    <script src="js/vide/jquery.vide.js"></script>
+    <!-- Stellar -->
+    <script src="js/stellar/jquery.stellar.js"></script>
+    <!-- Masonry -->
+    <script src="js/masonry/masonry.pkgd.min.js"></script>
+    <!-- Countdown -->
+    <script src="js/countdown/jquery.plugin.js"></script>
+    <script src="js/countdown/jquery.countdown.js"></script>
+    <!-- Countdown Labels / Localisation -->
+    <script src="js/countdown/jquery.countdown-custom-label.js"></script>
+    <!-- Magnific Popup -->
+    <script src="js/magnific-popup/jquery.magnific-popup.js"></script>
+    <!-- Owl Carousel -->
+    <script src="js/owlcarousel/owl.carousel.js"></script>
+
+    <!-- Custom Core Script -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- Custom Additional Script -->
+    <script type="text/javascript" src="js/main-slider-fade.js"></script>
+</body>
+
 </html>
