@@ -1,186 +1,405 @@
-import React from 'react';
-import { render } from 'react-dom';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
+'use strict';
 
-import Home from './src/components/Home';
-import About from './src/components/About';
+/*============================== 
+	- Template Name: FOREVER - Responsive HTML Wedding Template
+	- Author: DoubleEight
+	- Version: 1.0
+	- Website: www.dethemes.com
+================================= */
 
-render((
-  <Router>
-    <div className="wrapper">
-      <ul role="nav">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-      </ul>
+/*---------------------- 
+	Script Guide
+------------------------
+01. BROWSER AGENT FUNCTION
+	01.1 Check CHROME (Mobile / Tablet)
+	01.2 Check IOS
+	01.3 Check FIREFOX
+	01.4 Check IE (< IE10)
+	01.5 Check IE11
+	01.6 Check IE11 (Not Windows Phone)
+	01.7 Check IE10
+	01.8 Check IE9
+	01.9 Check Safari/Chrome Mac
+	
+02. FULLSCREEN CLASS
 
-      <Route path="/" component={Home} />
-      <Route path="/about" component={About}/>
+03. HIDDEN ALL ANIMATION CLASS
 
-      <header id="nav-header">
-        <nav id="nav-bar" className="top-bar fluid-width transparent nav-center sticky-nav animation fadeInDown">
+04. PACE PRELOADER
+	04.1 Gallery - Masonry
+	04.2 Nav Header Position (Mobile / Tablet)
+	04.3 Waypoint Sticky Navbar
+		04.3.1 Top Bar
+		04.3.2 Bottom Bar
+	04.4 Waypoint Sticky Menu Icon (Sidebar Version)
+	04.5 Waypoint Animate CSS
+	04.6 Stellar Parallax
+	
+05. PRELOADER HEART ANIMATION (IE10 / 11)
 
-          <div id="nav-wrapper">
+06. BIND TOUCH FOR PHOTO ITEM (Mobile / Tablet)
 
-            <div className="logo-wrapper">
-              <a href="index.html">
-                <div className="css-logo rounded">
-                  <div className="css-logo-text">
-                    <strong>G</strong><i className="de-icon-heart-1"></i><strong>D</strong>
-                  </div>
-                </div>
-              </a>
+07. COUNTDOWN
 
-              <a href="index.html">
-                <div className="img-logo">
-                  <img src="images/slide1.jpg" />
-                </div>
-              </a>
-            </div>
+08. MOBILE MENU
 
-            <div id="mobile-nav">
-              <i className="de-icon-menu"></i>
-            </div>
+09. DOUBLE TAP DROP DOWN MENU
 
-            <ul id="nav-menu">
-              <li className="first-child">
-                <a href="index.html">HOME</a>
-                <ul>
-                  <li>
-                    <a href="#">MENU VARIATIONS</a>
-                    <ul>
-                      <li><a href="index.html">TOP BAR - TRANSPARENT</a></li>
-                      <li><a href="index-topbar-color.html">TOP BAR - COLOR</a></li>
-                      <li><a href="index-bottombar-transparent.html">BOTTOM BAR - TRANSPARENT</a></li>
-                      <li><a href="index-bottombar-color.html">BOTTOM BAR - COLOR</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">SLIDER VARIATIONS</a>
-                    <ul>
-                      <li><a href="index.html">IMAGE - FADE</a></li>
-                      <li><a href="index-slide.html">IMAGE - SLIDE</a></li>
-                      <li><a href="index-image-animation-v1.html">IMAGE - ANIMATION - MUSIC - V1</a></li>
-                      <li><a href="index-image-animation-v2.html">IMAGE - ANIMATION - MUSIC - V2</a></li>
-                      <li><a href="index-title-animation.html">TITLE - ANIMATION</a></li>
-                      <li><a href="index-image-title-animation.html">TITLE &amp; IMAGE - ANIMATION</a></li>
-                      <li><a href="index-video.html">VIDEO</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">PRELOADER VARIATIONS</a>
-                    <ul>
-                      <li><a href="index.html">PRELOADER - DEFAULT</a></li>
-                      <li><a href="index-preloader-logo-spinner.html">PRELOADER - V1</a></li>
-                      <li><a href="index-preloader-couple-name.html">PRELOADER - V2</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">ABOUT</a>
-                <ul>
-                  <li>
-                    <a href="profile-him.html">ABOUT HIM</a>
-                  </li>
-                  <li>
-                    <a href="profile-her.html">ABOUT HER</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">GALLERY</a>
-                <ul>
-                  <li><a href="gallery.html">GALLERY</a></li>
-                  <li><a href="gallery-slider.html">GALLERY WITH SLIDER</a></li>
-                  <li><a href="gallery-full-5col.html">FULL GALLERY - 5 COLUMN</a></li>
-                  <li><a href="gallery-full-4col.html">FULL GALLERY - 4 COLUMN</a></li>
-                  <li><a href="gallery-full-3col.html">FULL GALLERY - 3 COLUMN</a></li>
-                </ul>
-              </li>
-              <li><a href="the-story.html">THE STORY</a></li>
-              <li className="first-child split-margin">
-                <a href="#">THE WEDDING</a>
-                <ul>
-                  <li><a href="location.html">LOCATION</a></li>
-                  <li><a href="accomodation.html">ACCOMODATION</a></li>
-                  <li>
-                    <a href="#">BRIDESMAID</a>
-                    <ul>
-                      <li><a href="bridesmaid-gallery.html">BRIDESMAID GALLERY</a></li>
-                      <li><a href="bridesmaid-parallax-image.html">BRIDESMAID - PARALLAX IMAGE</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">GROOMSMEN</a>
-                    <ul>
-                      <li><a href="groomsmen-gallery.html">GROOMSMEN GALLERY</a></li>
-                      <li><a href="groomsmen-parallax-image.html">GROOMSMEN - PARALLAX IMAGE</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="gift.html">GIFT REGISTRY</a></li>
-                </ul>
-              </li>
+10. OWL CAROUSEL
+	10.1 OWL CAROUSEL - GIFT REGISTRY
+	10.2 OWL CAROUSEL - MORE EVENTS (ONEPAGE)
+	10.3 OWL CAROUSEL - REGISTRY LOGO (ONEPAGE)
 
-              <li>
-                <a href="#">BLOG</a>
-                <ul>
-                  <li><a href="blog.html">BLOG</a></li>
-                  <li><a href="blog-slider.html">BLOG SLIDER</a></li>
-                  <li><a href="blog-parallax-image.html">BLOG PARALLAX IMAGE</a></li>
-                  <li><a href="blog-parallax-sidebar.html">BLOG PARALLAX - SIDEBAR</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="page.html">PAGE</a>
-              </li>
-              <li>
-                <a href="#">RSVP</a>
-                <ul>
-                  <li><a href="rsvp-1.html">RSVP - 1</a></li>
-                  <li><a href="rsvp-2.html">RSVP - 2</a></li>
-                  <li><a href="rsvp-3.html">RSVP - 3</a></li>
-                  <li><a href="rsvp-custom.html">CUSTOM</a></li>
-                </ul>
-              </li>
-            </ul>
+11. RSVP
+	11.1 Custom Checkbox
+	11.2 Custom Radio
 
-            <div className="clearboth"></div>
-          </div>
-        </nav>
-      </header>
+12. SMOOTH SCROLL
 
-      <section id="main-slider" className="flexslider fullscreen">
-        <div className="slide-title-outter-wrapper">
-          <div className="slide-title-inner-wrapper">
-            <div className="slide-title align-middle">
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-offset-3 col-md-6 animation delay1 fadeInUp">
-                    <div id="save-the-date">
-                      <div id="save">Save</div>
-                      <div id="the-date">The Date</div>
-                      <div id="date">- 19<span className="pink-dot">.</span>08<span className="pink-dot">.</span>15 -</div>
-                    </div>
-                    <div className="banner-text light medium" style={{ letterSpacing: '3px' }}>
-                      <h4>*** WE ARE GETTING MARRIED ***</h4>
-                    </div>
-                    <div className="heart-divider" style={{ margin: 0 }}>
-                      <span className="white-line" style={{ width: '10px' }}></span>
-                      <i className="de-icon-heart pink-heart"></i>
-                      <i className="de-icon-heart white-heart"></i>
-                      <span className="white-line" style={{ width: '10px' }}></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </Router>
-), document.getElementById('root'));
+13. MAGNIFIC POPUP
+	13.1 Magnific Zoom
+	13.2 Magnific Zoom Gallery
+	13.3 Magnific Ajax
+	
+14. DISALBE TRANSITION (Mobile / Tablet)
+
+15. AUDIO
+	15.1 Reset Mute Control (Chrome and Safari Mobile)
+	15.2 On toggle mute button
+
+16. VIDEO CONTROL
+	16.1 Hide Video Control (Mobile / Tablet)
+	16.2 Play Pause Video
+	
+*/
+		
+	
+	
+$(document).ready(function() {
+		
+	// 01. BROWSER AGENT FUNCTION		
+	//==================================================================================
+	
+	// 01.1 Check Chrome (Mobile / Tablet)
+	//----------------------------------------------------------------------------------
+	var isChromeMobile = function isChromeMobile() {
+		if (device.tablet() || device.mobile()) {
+			if (window.navigator.userAgent.indexOf("Chrome") > 0 || window.navigator.userAgent.indexOf("CriOS") > 0){
+				return 1;
+			}
+		}
+	}
+	
+	// 01.2 Check IOS
+	//----------------------------------------------------------------------------------
+	var isIOS = function isIOS() {
+		if (window.navigator.userAgent.indexOf("iPhone") > 0 || window.navigator.userAgent.indexOf("iPad") > 0 || window.navigator.userAgent.indexOf("iPod") > 0){
+			return 1;
+		}
+	}
+	
+	// 01.3 Check FIREFOX 
+	//----------------------------------------------------------------------------------
+	var is_firefox = function is_firefox() {
+		if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+			return 1;
+		}
+	}
+	
+	// 01.4 Check IE (< IE10)
+	//----------------------------------------------------------------------------------
+	var isIE = function isIE() {
+ 		if (window.navigator.userAgent.indexOf("MSIE ") > 0 || !!navigator.userAgent.match(/Trident\/7\./)) {
+   		 	return 1;
+		}
+	}
+	
+	// 01.5 Check IE11
+	//----------------------------------------------------------------------------------
+	var isIE11 = function isIE11() {	
+ 		if (!!navigator.userAgent.match(/Trident\/7\./)) {
+   		 	return 1;
+		}
+	}
+	
+	// 01.6 Check IE11 (Not Windows Phone)
+	///----------------------------------------------------------------------------------
+	var isIE11desktop = function isIE11desktop() {	
+ 		if (!!navigator.userAgent.match(/Trident\/7\./) && window.navigator.userAgent.indexOf("Windows Phone") < 0) {
+   		 	return 1;
+		}
+	}
+	
+	// 01.7 Check IE10
+	//----------------------------------------------------------------------------------
+	var isIE10 = function isIE10() {
+ 		if (window.navigator.userAgent.indexOf("MSIE 10.0") > 0) {
+   		 	return 1;
+		}
+	}
+	
+	// 01.8 Check IE9
+	//----------------------------------------------------------------------------------
+	var isIE9 = function isIE9() {
+ 		if (window.navigator.userAgent.indexOf("MSIE 9.0") > 0) {
+   		 	return 1;
+		}
+	}
+	
+	// 01.9 Check Safari/Chrome Mac
+	//----------------------------------------------------------------------------------
+	var isSafari = function isSafari() {
+	 	if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Mac') != -1) {
+   		 	return 1;
+		}
+	}
+		
+	
+	// 02. FULLSCREEN CLASS		
+	//==================================================================================
+	var fullscreen = function(){
+		var fheight = $(window).height();
+		$('.fullscreen').css("height",fheight);		
+	}
+	
+	//Execute on load
+	fullscreen();
+		
+	//Execute on window resize
+	$(window).resize(function() {	
+		fullscreen();	
+	});
+	
+	// 03. HIDDEN ALL ANIMATION CLASS
+	//==================================================================================
+	// Waypoint will animate it later (04.5 Waypoint Animate CSS)
+	if( !device.tablet() && !device.mobile() && !isIE9() ) {
+			$('.animation').css({
+				visibility: 'hidden'
+			});	
+	}
+			
+	// 04. PACE PRELOADER
+	//==================================================================================
+	Pace.on('done', function () {
+		$('#preloader').hide();
+	});
+	
+	Pace.on('hide', function () {
+		
+		
+		// 04.2 Nav Header Position (Mobile)
+		//------------------------------------------------------------------------------
+		if (device.tablet() || device.mobile()) {
+			if ($("#nav-bar").hasClass("sticky-nav")) {
+				$("#nav-header").css("position","relative");
+			}
+		}
+		
+		// 04.3 Waypoint Sticky Navbar
+		//------------------------------------------------------------------------------		
+		if ($("#nav-bar").hasClass("sticky-nav")){
+			
+			// 04.3.1 Top Bar
+			if ($("#nav-bar").hasClass("top-bar")){
+			
+	 			var nav_header_waypoint = $('#nav-header').waypoint(function(direction) {
+  					
+					if (direction === 'down') {
+						if( !device.tablet() && !device.mobile() ) {
+							$("#nav-bar").addClass("stick-it animated fadeInDownBig");
+						}
+						else
+						{
+							$("#nav-bar").addClass("stick-it");
+						}
+					}
+					else {
+						$("#nav-bar").removeClass("stick-it animated fadeInDownBig");
+					}
+				
+				}, {
+  					offset:'-100%'
+				});
+			}
+			
+			// 04.3.2 Bottom Bar
+			else if  ($("#nav-bar").hasClass("bottom-bar")){
+				
+				var waypoints = $('#nav-header').waypoint(function(direction) {
+  					
+					if (direction === 'down') {
+						if( !device.tablet() && !device.mobile() ) {
+							$("#nav-bar").addClass("stick-it animated fadeInDownBig");
+						}
+						else
+						{
+							$("#nav-bar").addClass("stick-it");
+						}
+					}
+					else if (direction === 'up') {
+						$("#nav-bar").removeClass("stick-it animated fadeInDownBig");
+					}
+						
+				}, {
+  					offset:'-145px'
+				});		
+			}
+			
+		}
+		
+		// 04.4 Waypoint Sticky Menu Icon (Sidebar Version)
+		//------------------------------------------------------------------------------
+		
+		var sticky_menuicon_waypoint = $('#menu-icon').waypoint(function(direction) {
+			if (direction === 'down') {
+				$('#sticky-menuicon').show();
+			}
+			else {
+				$('#sticky-menuicon').hide();
+			}
+			
+		}, {
+  			offset:'-100%'
+		})
+			
+			
+		// 04.5 Waypoint Animate CSS
+		//------------------------------------------------------------------------------
+		if( !device.tablet() && !device.mobile() && !isIE9() ) {	
+			$('.animation').each(function(){
+        		var _this = this;
+        		var animation_waypoint = new Waypoint({
+            		element: _this,
+            		handler: function (direction) {
+						$(this.element).css({ visibility: 'visible' });
+						$(this.element).addClass('animated');
+            			},
+            			offset: '90%'
+        			});
+        	});
+			
+		}		
+		
+		// 04.6 Stellar Parallax
+		//------------------------------------------------------------------------------
+	 	if( !device.tablet() && !device.mobile() && !isIE9() && !isIE10() && !isSafari() ) {
+			$(".image-divider").css("background-attachment","fixed");
+		 	$(window).stellar({
+			 	horizontalScrolling: false,
+				responsive: true,
+		 	});
+	 	}
+	 		 
+	}); // END of Pace on Hide
+	
+	
+	// 05. PRELOADER HEART ANIMATION (IE10 / 11)
+	//==================================================================================	
+	if (isIE10() || isIE11()){
+		$(".heart-animation").css("letter-spacing","normal");
+	}
+	
+	// 05. IMAGE DIVIDER (Mobile / Tablet)
+	//==================================================================================
+	/*if (device.tablet() || device.mobile() || isIE9() || isIE10() ||isSafari()) {
+		$(".image-divider").addClass("mobile");
+	}*/
+		
+	// 06. BIND TOUCH FOR PHOTO ITEM (Mobile / Tablet)
+	//==================================================================================
+	$('.photo-item').bind('touchstart touchend', function(e) {
+	});	
+		
+	// 07. COUNTDOWN
+	//===================================================================================
+	var theday = new Date();
+	theday = new Date(2017, 6, 3);
+	$('#countdown').countdown({until: theday, format: 'WDHMS'});
+	$('#countdown').countdown($.countdown.regionalOptions['custom-label']); 
+		 
+	$('#date-countdown').countdown({until: theday, format: 'WDHMS'});
+		 
+	// 08. MOBILE MENU
+	//==================================================================================
+	$("#mobile-nav").click(function(e){
+		e.preventDefault()
+		$("#nav-menu").toggleClass("open");
+	});
+	
+	// Hide Menu After Click It. Will be used on onepage version. 
+	$("#nav-menu li a").click(function(){
+		 if ($(this).attr("href") !== "#") {
+			 $("#nav-menu").removeClass("open");
+		 }
+	});
+
+	// 10. OWL CAROUSEL
+	//==================================================================================
+
+	// 10.1 OWL CAROUSEL - GIFT REGISTRY
+	//------------------------------------------------------------------------------
+	if ($("#gift-registry").length){
+    	$("#gift-registry").owlCarousel({
+			items : 3, 
+			autoPlay: 2000,
+			stopOnHover: true,
+			pagination: true,
+		});
+		
+		if (device.tablet() || device.mobile()) {
+			var owl_gift = $("#gift-registry").data('owlCarousel');
+			owl_gift.stop()
+		}
+	}
+ 	
+	// 10.2 OWL CAROUSEL - MORE EVENTS (ONEPAGE)
+	//------------------------------------------------------------------------------
+	if ($("#events-carousel").length){		
+    	$("#events-carousel").owlCarousel({
+			items : 2,
+			itemsDesktopSmall: [979,2], 
+			autoPlay: 2000,
+			stopOnHover: true,
+			pagination: true,
+			navigation:false,
+		});		
+		
+		if (device.tablet() || device.mobile()) {
+			var owl_events = $("#events-carousel").data('owlCarousel');
+			owl_events.stop()
+		}	
+	}
+ 	
+	// 10.3 OWL CAROUSEL - REGISTRY LOGO (ONEPAGE)
+	//------------------------------------------------------------------------------
+	if ($("#registry-logo").length){		
+    	$("#registry-logo").owlCarousel({
+			items : 3, 
+			autoPlay: 2000,
+			stopOnHover: true,
+			pagination: false,
+			navigation: false,
+		});
+		
+		if (device.tablet() || device.mobile()) {
+			var owl_logo = $("#registry-logo").data('owlCarousel');
+			owl_logo.stop()
+		}
+	}
+	 
+	// 14. DISALBE TRANSITION (Mobile / Tablet)
+	//==================================================================================
+	if( device.tablet() || device.mobile() ) {
+		if (!isIE11desktop()){
+			// de-icon
+			$(".de-icon, .de-icon i").css("transition","none");
+		
+			// Photo-item		 
+			$(".photo-item img.hover-animation").css("transition","none");
+			$(".photo-item .layer.hover-animation").css("transition","none"); 
+		 }
+	 }
+	
+});
+	 
